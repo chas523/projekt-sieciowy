@@ -1,5 +1,6 @@
 #include <iostream>
 #include <winsock2.h>
+#pragma comment(lib, "ws2_32")
 
 
 using namespace  std;
@@ -27,9 +28,9 @@ int main() {
         cout << "Blad wysylki ";
     }
     cout << "[send]"<<send_size<<endl;
-    char *in = new char(2000);
+    char *in = new char[2000];
     int recv_size;
-    for(;;){
+    for(int i = 0; i < 100; i++){
         if((recv_size = recv(s,in,2000,0))== SOCKET_ERROR) {
             cout << "Blad odbioru";
         }
