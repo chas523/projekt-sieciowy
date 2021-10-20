@@ -2,6 +2,8 @@
 #include <winsock2.h>
 #pragma comment(lib, "ws2_32")
 
+// g++ main.cpp -lwsock32 -o net
+// ./net.exe
 
 using namespace  std;
 
